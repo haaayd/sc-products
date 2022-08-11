@@ -28,8 +28,10 @@
     </div>
     <nav>
     <ul>
-        <li><a href="/products">My products</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'profiles_index' %}">Profiles</a></li>
+        <li><a href="{% url 'profiles_create' %}">Add a profile</a></li>
+
+        <li><a href="{% url 'about' %} ">About</a></li>
     </ul>
     </nav>
 </header>

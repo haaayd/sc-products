@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Profile
 
 
@@ -16,3 +17,7 @@ def profiles_index(request):
 def profiles_detail(request, profile_id):
     profile = Profile.objects.get(id=profile_id)
     return render(request, 'profiles/detail.html', { 'profile': profile })
+class ProfileCreate(CreateView):
+    model = Profile
+    fields = '__all__'
+    success_url = '/profiles/'

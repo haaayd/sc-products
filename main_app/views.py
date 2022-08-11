@@ -12,3 +12,7 @@ def about(request):
 def profiles_index(request):
     profiles = Profile.objects.all()
     return render(request, 'profiles/index.html', { 'profiles': profiles })
+
+def profiles_detail(request, profile_id):
+    profile = Profile.objects.get(id=profile_id)
+    return render(request, 'profiles/detail.html', { 'profile': profile })

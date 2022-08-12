@@ -11,36 +11,35 @@
 {% endblock %}
 
 {% block content %}
-
-<section class="cat-container">
-    <div class="cat-img">
-    <img 
-        src="{% static 'images/bottle.png' %}" 
-        alt="bottle"
-    >
+<div class="p-container">
+    <section class="p-container">
+        <div class="bottle-img">
+        <img 
+            src="{% static 'images/bottle.png' %}" 
+            alt="bottle"
+        >
+        </div>
+        <div class="product-details">
+        <h1>{{ profile.name }}</h1>
+        <table>
+            <thead>
+                <tr><th>Skin Type: </th><th>Best time: </th><th>Additional Info: </th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ profile.get_skin_type_display }}</td>
+                    <td>{{ profile.get_time_display }}</td>
+                    <td>{{ profile.comment }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="product-details">
-    <h1>{{ profile.name }}</h1>
-    <table>
-        <thead>
-            <tr><th>Skin Type: </th><th>Best time: </th><th>Additional Info: </th></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ profile.get_skin_type_display }}</td>
-                <td>{{ profile.get_time_display }}</td>
-                <td>{{ profile.comment }}</td>
-            </tr>
-        </tbody>
-    </table>
-    {% comment %} <p>{{ profile.get_time_display }}</p>
-    <p>{{ profile.comment }}</p>
-    <p>{{ profile.get_skin_type_display }}</p> {% endcomment %}
+</div>
 
-    <div class="cat-actions">
-        <a href="{% url 'profiles_update' profile.id %}" class="btn warn">Edit</a>
-        <a href="{% url 'profiles_delete' profile.id %}" class="btn danger">Delete</a>
-    </div>
+
+    <div class="p-actions">
+        <a href="{% url 'profiles_update' profile.id %}" class="btn submit">Edit</a>
+        <a href="{% url 'profiles_delete' profile.id %}" class="btn submit">Delete</a>
     </div>
 </section>
 

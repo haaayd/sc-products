@@ -7,13 +7,13 @@
 
 {% block content %}
     {% if profile %}
-    <h1>Edit {{ profile.name }}</h1>
+        <h1>{{ profile.name }}</h1>
     {% else %}
-    <h1>Add Profile</h1>
+        <h1>Add Profile</h1>
     {% endif %}
 
 <div class="page-header">
-    <h1>Add Profile</h1>
+
     <img src="{% static 'images/pump.png' %}" alt="pump"/>
 </div>
 {% comment %} 

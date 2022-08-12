@@ -31,6 +31,14 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
+    def __str__(self):
+        return f"{self.get_skin_type_display()}"
+
+    def __str__(self):
+        return f"{self.get_time_display()}"
+
+    
+
     def get_absolute_url(self):
         return reverse('profiles_detail', kwargs={'profile_id': self.id})
 

@@ -20,14 +20,14 @@
                 <div class="card-content">
                     <div class="card-img-container">
                         <img 
-                            src="{% static 'images/sk8r-boi-cat.svg' %}" 
-                            alt="A skater boy cat"
+                            src="{% static 'images/cream.png' %}" 
+                            alt="product cream twist"
                         >
                     </div>
                     <h2 class="card-title">{{ profile.name }}</h2>
-                    <p><small>{{ profile.skintype }}</small></p>
+                    {% comment %} <p><small>{{ profile.get_time_display }}</small></p> {% endcomment %}
+                    <p><small>Skin Type: {{ profile.get_skin_type_display }}</small></p>
                     <p><small>{{ profile.comment }}</small></p>
-                    <p><small>{{ profile.howto }}</small></p>
                 </div>
             </div>
         </a>

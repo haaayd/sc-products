@@ -15,13 +15,28 @@
 <section class="cat-container">
     <div class="cat-img">
     <img 
-        src="{% static 'images/sk8r-boi-cat.svg' %}" 
-        alt="A skater boy cat"
+        src="{% static 'images/bottle.png' %}" 
+        alt="bottle"
     >
     </div>
-    <div class="cat-details">
+    <div class="product-details">
     <h1>{{ profile.name }}</h1>
-    <p>{{ profile.skintype }}</p>
+    <table>
+        <thead>
+            <tr><th>Skin Type: </th><th>Best time: </th><th>Additional Info: </th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ profile.get_skin_type_display }}</td>
+                <td>{{ profile.get_time_display }}</td>
+                <td>{{ profile.comment }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% comment %} <p>{{ profile.get_time_display }}</p>
+    <p>{{ profile.comment }}</p>
+    <p>{{ profile.get_skin_type_display }}</p> {% endcomment %}
+
     <div class="cat-actions">
         <a href="{% url 'profiles_update' profile.id %}" class="btn warn">Edit</a>
         <a href="{% url 'profiles_delete' profile.id %}" class="btn danger">Delete</a>

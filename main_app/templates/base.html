@@ -13,6 +13,9 @@
 >
     <title>SkinCare</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
     {% block head %}
     {% endblock %}
 </head>
@@ -29,12 +32,12 @@
     <nav>
     <ul>
         {% if user.is_authenticated %}
-            <li><a href="{% url 'profiles_index' %}">Profiles</a></li>
-            <li><a href="{% url 'profiles_create' %}">Add a profile</a></li>
-            <li><a href="{% url 'about' %} ">About</a></li>
+            <li><a href="{% url 'profiles_index' %}">Products</a></li>
+            <li><a href="{% url 'profiles_create' %}">Add a product</a></li>
+            {% comment %} <li><a href="{% url 'about' %} ">About</a></li> {% endcomment %}
             <li><a href="{% url 'logout' %}">Log out</a></li>
         {% else %}
-            <li><a href="{% url 'about' %}">About</a></li>
+            {% comment %} <li><a href="{% url 'about' %}">About</a></li> {% endcomment %}
             <li><a href="{% url 'home' %}">Login</a></li>
             <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}

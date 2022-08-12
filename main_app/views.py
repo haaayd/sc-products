@@ -27,7 +27,7 @@ def profiles_detail(request, profile_id):
 
 class ProfileCreate(LoginRequiredMixin, CreateView):
     model = Profile
-    fields = '__all__'
+    fields = ['name', 'comment', 'skin_type', 'time']
     success_url = '/profiles/'
 
     def form_valid(self, form):

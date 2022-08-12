@@ -36,7 +36,7 @@ class ProfileCreate(LoginRequiredMixin, CreateView):
 
 class ProfileUpdate(LoginRequiredMixin, UpdateView):
     model = Profile
-    fields = '__all__'
+    fields = ['name', 'comment', 'skin_type', 'time']
 
 class ProfileDelete(LoginRequiredMixin, DeleteView):
     model= Profile

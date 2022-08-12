@@ -1,8 +1,10 @@
 # Skin Care
-<img src="./images/front.png">
+<img src="./main_app/static/images/front.png">
 
-## The idea behind skincare app!
+## The idea behind skincare app! 
+
     a place to view all the skin care products I have tried or am still trying out. 
+→ <a href="https://hsr-sskincare.herokuapp.com/"> Check it out </a>
    
 
 
@@ -10,7 +12,7 @@
 
   ## Getting Started 
   → <a href="https://trello.com/b/b6U1qnum/skincare"> Planning materials </a>
-  <img src="./images/erd-sc.png"> 
+  <img src="./main_app/static/images/erd-sc.png"> 
 
 
 

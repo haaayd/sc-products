@@ -22,6 +22,10 @@
     <div class="cat-details">
     <h1>{{ profile.name }}</h1>
     <p>{{ profile.skintype }}</p>
+    <div class="cat-actions">
+        <a href="{% url 'profiles_update' profile.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'profiles_delete' profile.id %}" class="btn danger">Delete</a>
+    </div>
     </div>
 </section>
 
